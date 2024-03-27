@@ -1,0 +1,13 @@
+specVersion: "3.2"
+metadata:
+  name: tutorial.smartcontrols
+type: application
+framework:
+  name: SAPUI5
+  version: "1.122.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.comp
+    - name: sap.ui.core
+    - name: sap.ui.layout
+    - name: themelib_sap_horizon
