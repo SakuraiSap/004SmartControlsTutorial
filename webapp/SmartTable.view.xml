@@ -4,10 +4,19 @@
     controllerName="sap.ui.demo.smartControls.SmartTable"
     xmlns:smartFilterbar="sap.ui.comp.smartfilterbar"
     xmlns:smarTable="sap.ui.comp.smarttable"
+    xmlns:smartVariantManagement="sap.ui.comp.smartvariants"    
 >
+    <HBox class="exPageVariantPadding">                                                
+        <smartVariantManagement:SmartVariantManagement        
+            id="pageVariantId"
+            persistencyKey="PageVariantPKey" />     
+    </HBox>
     <smartFilterbar:SmartFilterBar
         id="smartFilterBar"
         entitySet="Products"
+        smartVariant="pageVariantId"
+        persistencyKey="SmartFilterPKey"
+        assignedFiltersChanged="onFiltersChanged"
     >
         <smartFilterbar:controlConfiguration>
             <smartFilterbar:ControlConfiguration
@@ -17,22 +26,22 @@
             >
             </smartFilterbar:ControlConfiguration>
         </smartFilterbar:controlConfiguration>
-
-        <smarTable:SmartTable
-            id="smartTable_ResponsiveTable"
-            smartFilterId="smartFilterBar"
-            tableType="ResponsiveTable"
-            editable="false"
-            entitySet="Products"
-            useVariantManagement="true"
-            useTablePersonalisation="true"
-            header="Products"
-            showRowCount="true"
-            useExportToExcel="false"
-            enableAutoBinding="true"
-            persistencyKey="SmartTablePKey"
-            enableAutoColumnWidth="true"
-        >
-        </smarTable:SmartTable>
     </smartFilterbar:SmartFilterBar>
+    <smarTable:SmartTable
+        id="smartTable_ResponsiveTable"
+        smartFilterId="smartFilterBar"
+        tableType="ResponsiveTable"
+        editable="false"
+        entitySet="Products"
+        useVariantManagement="true"
+        useTablePersonalisation="true"
+        header="Products"
+        showRowCount="true"
+        useExportToExcel="false"
+        enableAutoBinding="true"
+        smartVariant="pageVariantId"
+        persistencyKey="SmartTablePKey"
+        enableAutoColumnWidth="true"
+    >
+    </smarTable:SmartTable>
 </mvc:View>
