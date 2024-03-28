@@ -24,12 +24,13 @@
             tableType="ResponsiveTable"
             editable="false"
             entitySet="Products"
-            useVariantManagement="false"
+            useVariantManagement="true"
             useTablePersonalisation="true"
             header="Products"
             showRowCount="true"
             useExportToExcel="false"
             enableAutoBinding="true"
+            persistencyKey="SmartTablePKey"
             enableAutoColumnWidth="true"
         >
         </smarTable:SmartTable>
