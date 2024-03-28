@@ -15,6 +15,7 @@
 				<Property Name="Category" Type="Edm.String" sap:label="Category" sap:filterable="true"/>
 				<Property Name="Price" Type="Edm.String" sap:unit="CurrencyCode" MaxLength="3" sap:label="Price" sap:filterable="false"/>
 				<Property Name="CurrencyCode" Type="Edm.String" MaxLength="3" sap:label="Currency" sap:semantics="currency-code" sap:filterable="true"/>
+				<Property Name="Status" Type="Edm.String" sap:label="Status" sap:filterable="false"/>
 			</EntityType>
 			<EntityType Name="Currency">
 				<Key>
