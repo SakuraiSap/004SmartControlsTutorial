@@ -25,7 +25,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "sap.ui.demo.smartControls.SmartField",
+			"viewName": "sap.ui.demo.smartControls.SmartLink",
 			"type": "XML",
 			"async": true
 		},

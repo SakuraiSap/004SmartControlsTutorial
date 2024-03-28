@@ -1,8 +1,8 @@
 <mvc:View
-	controllerName="sap.ui.demo.smartControls.SmartField"
+	controllerName="sap.ui.demo.smartControls.SmartLink"
 	xmlns="sap.m"
-	xmlns:smartForm="sap.ui.comp.smartform"
 	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:smartForm="sap.ui.comp.smartform"
 	xmlns:sap.ui.layout="sap.ui.layout"
 	xmlns:smartField="sap.ui.comp.smartfield">
 	<smartForm:SmartForm editable="true">
@@ -16,7 +16,7 @@
 		</smartForm:layout>
 		<smartForm:Group>
 			<smartForm:GroupElement>
-				<smartField:SmartField value="{Price}" id="idPrice" editable="true"/>
+				<smartField:SmartField value="{Name}" id="idName" editable="false"/>
 			</smartForm:GroupElement>
 		</smartForm:Group>
 	</smartForm:SmartForm>

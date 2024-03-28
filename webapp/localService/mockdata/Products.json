@@ -1,6 +1,7 @@
 [
   {
 	"ProductId": "4711",
+	"Name": "SAP HANA",
 	"Price": 856.49,
 	"CurrencyCode": "EUR"
   }
