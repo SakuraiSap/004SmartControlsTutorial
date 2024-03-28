@@ -1,0 +1,35 @@
+<mvc:View 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="sap.ui.demo.smartControls.SmartForm"
+	xmlns:smartForm="sap.ui.comp.smartform" 
+	xmlns:smartField="sap.ui.comp.smartfield">
+    <smartForm:SmartForm
+        id="smartFormPage"
+        editTogglable="true"
+        title="{Name}"
+        flexEnabled="false"
+    >
+        <smartForm:Group label="Product">
+            <smartForm:GroupElement>
+                <smartField:SmartField value="{ProductId}"></smartField:SmartField>
+            </smartForm:GroupElement>
+            <smartForm:GroupElement>
+                <smartField:SmartField value="{Name}"></smartField:SmartField>
+            </smartForm:GroupElement>
+            <smartForm:GroupElement elementForLabel="0">
+                <smartField:SmartField value="{CategoryName}"></smartField:SmartField>
+                <smartField:SmartField value="{Description}"></smartField:SmartField>
+            </smartForm:GroupElement>
+            <smartForm:GroupElement>
+                <smartField:SmartField value="{Price}"></smartField:SmartField>
+            </smartForm:GroupElement>
+        </smartForm:Group>
+
+		<smartForm:Group label="Supplier">
+			<smartForm:GroupElement>
+				<smartField:SmartField value="{SupplierName}" />
+			</smartForm:GroupElement>
+		</smartForm:Group>        
+    </smartForm:SmartForm>
+</mvc:View>

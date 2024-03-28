@@ -10,18 +10,27 @@
 				<Key>
 					<PropertyRef Name="ProductId" />
 				</Key>
-				<Property Name="ProductId" Type="Edm.String" />
-				<Property Name="Name" Type="Edm.String" sap:label="My Favorite Product" />
+				<Property Name="ProductId" Type="Edm.String" Nullable="false"
+					sap:updatable="false" MaxLength="20" sap:label="Product ID" />
+				<Property Name="Name" Type="Edm.String" Nullable="false"
+					MaxLength="30" sap:label="Name" />
+				<Property Name="CategoryName" Type="Edm.String" sap:label="Category Description"
+					sap:updatable="true" />
+				<Property Name="Description" Type="Edm.String" MaxLength="256"
+					sap:label="Description" sap:updatable="true" />
+				<Property Name="Price" Type="Edm.String" Nullable="false"
+					sap:unit="CurrencyCode" MaxLength="3" sap:label="Price"
+					sap:updatable="true" />
+				<Property Name="CurrencyCode" Type="Edm.String" Nullable="true"
+					MaxLength="3" sap:label="Currency" sap:semantics="currency-code"
+					sap:updatable="true" />
+				<Property Name="SupplierName" Type="Edm.String" Nullable="false"
+					sap:label="Supplier" sap:updatable="true" />
 			</EntityType>
 			<EntityContainer m:IsDefaultEntityContainer="true"
-				sap:supported-formats="json">
+				sap:supported-formats="atom json">
 				<EntitySet Name="Products" EntityType="EPM_REF_APPS_PROD_MAN_SRV.Product" />
 			</EntityContainer>
-			<Annotations Target="EPM_REF_APPS_PROD_MAN_SRV.Product/Name"
-				xmlns="http://docs.oasis-open.org/odata/ns/edm">
-				<Annotation Term="com.sap.vocabularies.Common.v1.SemanticObject"
-					String="tutorial_03_Name" />
-			</Annotations>
 		</Schema>
 	</edmx:DataServices>
-</edmx:Edmx>
+</edmx:Edmx>	
